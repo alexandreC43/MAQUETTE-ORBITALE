@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquette Orbitale</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="imageContainer">
+            <!-- Images pour le mode Bâtiment -->
+            <div id="batiment" class="image-set active">
+                <img src="Images/Scene1.jpg" alt="Bâtiment - Vue 1" />
+                <img src="Images/Scene2.jpg" alt="Bâtiment - Vue 2" />
+                <img src="Images/Scene3.jpg" alt="Bâtiment - Vue 3" />
+                <img src="Images/Scene4.jpg" alt="Bâtiment - Vue 4" />
+                <img src="Images/Scene5.jpg" alt="Bâtiment - Vue 5" />
+                <img src="Images/Scene6.jpg" alt="Bâtiment - Vue 6" />
+                <img src="Images/Scene7.jpg" alt="Bâtiment - Vue 7" />
+            </div>
+            <!-- Images pour le mode RDC -->
+            <div id="rdc" class="image-set">
+                <img src="Images/RDC1.jpg" alt="RDC - Vue 1" />
+                <img src="Images/RDC2.jpg" alt="RDC - Vue 2" />
+                <img src="Images/RDC3.jpg" alt="RDC - Vue 3" />
+                <img src="Images/RDC4.jpg" alt="RDC - Vue 4" />
+                <img src="Images/RDC5.jpg" alt="RDC - Vue 5" />
+                <img src="Images/RDC6.jpg" alt="RDC - Vue 6" />
+                <img src="Images/RDC7.jpg" alt="RDC - Vue 7" />
+            </div>
+            <!-- Images pour le mode Etage -->
+            <div id="etage" class="image-set">
+                <img src="Images/Etage1.jpg" alt="Etage - Vue 1" />
+                <img src="Images/Etage2.jpg" alt="Etage - Vue 2" />
+                <img src="Images/Etage3.jpg" alt="Etage - Vue 3" />
+                <img src="Images/Etage4.jpg" alt="Etage - Vue 4" />
+                <img src="Images/Etage5.jpg" alt="Etage - Vue 5" />
+                <img src="Images/Etage6.jpg" alt="Etage - Vue 6" />
+                <img src="Images/Etage7.jpg" alt="Etage - Vue 7" />
+            </div>
+        </div>
+    </div>
+    <div id="cursor">
+        <!-- Curseur -->
+        <input type="range" id="slider" min="1" max="7" value="1">
+    </div>
+
+    <!-- Boutons de mode -->
+    <div id="buttons">
+        <button onclick="switchMode('batiment')" id="btnBatiment">Bâtiment</button>
+        <button onclick="switchMode('rdc')" id="btnRDC">RDC</button>
+        <button onclick="switchMode('etage')" id="btnEtage">Etage</button>
+        <div id="appartement-list">
+            <!-- Les appartements seront injectés ici dynamiquement -->
+        </div>
+    </div>
+
+    <!-- Modale pour la visite virtuelle -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="virtualTour" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
